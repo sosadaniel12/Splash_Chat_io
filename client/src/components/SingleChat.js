@@ -15,7 +15,7 @@ import animationData from "../animations/typing.json";
 import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../Context/ChatProvider";
-const ENDPOINT = "https://protected-gorge-07116.herokuapp.com/"; // "https://talk-a-tive.herokuapp.com"; -> After deployment
+const ENDPOINT = "https://safe-stream-65170.herokuapp.com/";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
