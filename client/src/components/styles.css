@@ -3,5 +3,15 @@
   flex-direction: column;
   overflow-y: scroll;
   scrollbar-width: none;
+  color: white;
+}
+
+.searchBtn {
+  background-color: rgb(58, 58, 58);
+}
+
+.searchBtn:hover {
   color: black;
+  width: 250px;
+  transition: ease-in-out 0.4s;
 }
