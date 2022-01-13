@@ -204,7 +204,6 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
             bg="#E8E8E8"
             w="100%"
             h="100%"
-            borderRadius="lg"
             overflowY="hidden"
           >
             {loading ? (

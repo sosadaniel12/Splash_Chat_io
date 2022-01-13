@@ -65,7 +65,7 @@ io.on("connection", (socket) => {
     socket.emit("connected");
   });
 
-  socket.on("join chat", (room) => {
+  socket.on("joinRoom", (room) => {
     socket.join(room);
     console.log("User Joined Room: " + room);
   });
@@ -88,4 +88,22 @@ io.on("connection", (socket) => {
     console.log("USER DISCONNECTED");
     socket.leave(userData._id);
   });
+
+  // socket.on("chatroomMessage", async ({ chatroomId, message }) => {
+  //   if (message.trim().length > 0) {
+  //     const user = await User.findOne({ _id: socket.userId });
+  //     const newMessage = new Message({
+  //       chatroom: chatroomId,
+  //       user: socket.userId,
+  //       name: user.name,
+  //       message,
+  //     });
+  //     io.to(chatroomId).emit("newMessage", {
+  //       message,
+  //       name: user.name,
+  //       user: socket.userId,
+  //     });
+  //     await newMessage.save();
+  //   }
+  // });
 });

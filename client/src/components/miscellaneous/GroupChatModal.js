@@ -79,9 +79,9 @@ const GroupChatModal = ({ children }) => {
   };
 
   const handleSubmit = async () => {
-    if (!groupChatName || !selectedUsers) {
+    if (!groupChatName) {
       toast({
-        title: "Please fill all the feilds",
+        title: "Please fill all the fields",
         status: "warning",
         duration: 5000,
         isClosable: true,
@@ -138,7 +138,7 @@ const GroupChatModal = ({ children }) => {
             d="flex"
             justifyContent="center"
           >
-            Create Group Chat
+            Create Chat Room
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody d="flex" flexDir="column" alignItems="center">
@@ -182,7 +182,7 @@ const GroupChatModal = ({ children }) => {
           </ModalBody>
           <ModalFooter>
             <Button onClick={handleSubmit} colorScheme="blue">
-              Create Chat
+              Create Room
             </Button>
           </ModalFooter>
         </ModalContent>
