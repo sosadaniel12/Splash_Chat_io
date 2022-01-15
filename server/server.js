@@ -26,17 +26,10 @@ app.use("/api/message", messageRoutes);
 const __dirname1 = path.resolve();
 
 if (process.env.NODE_ENV === "production") {
-<<<<<<< HEAD
-  app.use(express.static(path.join(__dirname1, "/frontend/build")));
-
-  app.get("*", (req, res) =>
-    res.sendFile(path.resolve(__dirname1, "frontend", "build", "index.html"))
-=======
   app.use(express.static(path.join(__dirname1, "/client/build")));
 
   app.get("*", (req, res) =>
     res.sendFile(path.resolve(__dirname1, "client", "build", "index.html"))
->>>>>>> 8e1bcfe54294c7225fabeab498cd768e9bf2ac25
   );
 } else {
   app.get("/", (req, res) => {
@@ -72,16 +65,14 @@ io.on("connection", (socket) => {
     socket.emit("connected");
   });
 
-<<<<<<< HEAD
-  socket.on("join chat", (room) => {
-=======
-  socket.on("joinRoom", (room) => {
->>>>>>> 8e1bcfe54294c7225fabeab498cd768e9bf2ac25
-    socket.join(room);
-    console.log("User Joined Room: " + room);
+  socket.on("joinRoom", ({ chatroomId }) => {
+    socket.join(chatroomId);
+    console.log("User Joined Room: " + chatroomId);
   });
-  socket.on("typing", (room) => socket.in(room).emit("typing"));
-  socket.on("stop typing", (room) => socket.in(room).emit("stop typing"));
+  socket.on("typing", (chatroomId) => socket.in(chatroomId).emit("typing"));
+  socket.on("stop typing", (chatroomId) =>
+    socket.in(chatroomId).emit("stop typing")
+  );
 
   socket.on("new message", (newMessageRecieved) => {
     var chat = newMessageRecieved.chat;
@@ -95,12 +86,15 @@ io.on("connection", (socket) => {
     });
   });
 
+  socket.on("leaveRoom", ({ chatroomId }) => {
+    socket.leave(chatroomId);
+    console.log("A users left chatroom: " + chatroomId);
+  });
+
   socket.off("setup", () => {
     console.log("USER DISCONNECTED");
     socket.leave(userData._id);
   });
-<<<<<<< HEAD
-=======
 
   // socket.on("chatroomMessage", async ({ chatroomId, message }) => {
   //   if (message.trim().length > 0) {
@@ -119,5 +113,4 @@ io.on("connection", (socket) => {
   //     await newMessage.save();
   //   }
   // });
->>>>>>> 8e1bcfe54294c7225fabeab498cd768e9bf2ac25
 });
