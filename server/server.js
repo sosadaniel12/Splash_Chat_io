@@ -6,11 +6,15 @@ const chatRoutes = require("./routes/chatRoutes");
 const messageRoutes = require("./routes/messageRoutes");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const path = require("path");
-
+const { typeDefs, resolvers } = require("./schemas");
+const { ApolloServer } = require("apollo-server-express");
 dotenv.config();
 connectDB();
 const app = express();
-
+const servers = new ApolloServer({
+  typeDefs,
+  resolvers,
+});
 app.use(express.json()); // to accept json data
 
 // app.get("/", (req, res) => {
@@ -47,7 +51,8 @@ const PORT = process.env.PORT;
 
 const server = app.listen(
   PORT,
-  console.log(`Server running on PORT ${PORT}...`.yellow.bold)
+  console.log(`Server running on PORT ${PORT}...`.yellow.bold),
+  console.log(`Use GraphQL at http://localhost:${PORT}${servers.graphqlPath}`)
 );
 
 const io = require("socket.io")(server, {
