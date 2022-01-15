@@ -26,10 +26,17 @@ app.use("/api/message", messageRoutes);
 const __dirname1 = path.resolve();
 
 if (process.env.NODE_ENV === "production") {
+<<<<<<< HEAD
   app.use(express.static(path.join(__dirname1, "/frontend/build")));
 
   app.get("*", (req, res) =>
     res.sendFile(path.resolve(__dirname1, "frontend", "build", "index.html"))
+=======
+  app.use(express.static(path.join(__dirname1, "/client/build")));
+
+  app.get("*", (req, res) =>
+    res.sendFile(path.resolve(__dirname1, "client", "build", "index.html"))
+>>>>>>> 8e1bcfe54294c7225fabeab498cd768e9bf2ac25
   );
 } else {
   app.get("/", (req, res) => {
@@ -65,7 +72,11 @@ io.on("connection", (socket) => {
     socket.emit("connected");
   });
 
+<<<<<<< HEAD
   socket.on("join chat", (room) => {
+=======
+  socket.on("joinRoom", (room) => {
+>>>>>>> 8e1bcfe54294c7225fabeab498cd768e9bf2ac25
     socket.join(room);
     console.log("User Joined Room: " + room);
   });
@@ -88,4 +99,25 @@ io.on("connection", (socket) => {
     console.log("USER DISCONNECTED");
     socket.leave(userData._id);
   });
+<<<<<<< HEAD
+=======
+
+  // socket.on("chatroomMessage", async ({ chatroomId, message }) => {
+  //   if (message.trim().length > 0) {
+  //     const user = await User.findOne({ _id: socket.userId });
+  //     const newMessage = new Message({
+  //       chatroom: chatroomId,
+  //       user: socket.userId,
+  //       name: user.name,
+  //       message,
+  //     });
+  //     io.to(chatroomId).emit("newMessage", {
+  //       message,
+  //       name: user.name,
+  //       user: socket.userId,
+  //     });
+  //     await newMessage.save();
+  //   }
+  // });
+>>>>>>> 8e1bcfe54294c7225fabeab498cd768e9bf2ac25
 });

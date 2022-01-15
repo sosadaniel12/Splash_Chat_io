@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "frontend",
+=======
+  "name": "client",
+>>>>>>> 8e1bcfe54294c7225fabeab498cd768e9bf2ac25
   "version": "0.1.0",
   "proxy": "http://127.0.0.1:5000",
   "private": true,

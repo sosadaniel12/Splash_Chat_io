@@ -130,6 +130,7 @@ function SideDrawer() {
         alignItems="center"
         bg="white"
         w="100%"
+<<<<<<< HEAD
         p="5px 10px 5px 10px"
         borderWidth="5px"
       >
@@ -137,12 +138,31 @@ function SideDrawer() {
           <Button variant="ghost" onClick={onOpen}>
             <i className="fas fa-search"></i>
             <Text d={{ base: "none", md: "flex" }} px={4}>
+=======
+        p="10px"
+        marginBottom="1em"
+      >
+        <Tooltip label="Search Users to chat" hasArrow placement="bottom-end">
+          <Button
+            variant="ghost"
+            onClick={onOpen}
+            className="searchBtn"
+            color="white"
+          >
+            <i className="fas fa-search"></i>
+            <Text display={{ base: "none", md: "flex" }} px={4}>
+>>>>>>> 8e1bcfe54294c7225fabeab498cd768e9bf2ac25
               Search User
             </Text>
           </Button>
         </Tooltip>
+<<<<<<< HEAD
         <Text fontSize="2xl" fontFamily="Work sans">
           Talk-A-Tive
+=======
+        <Text fontSize="3xl" fontFamily="Work sans" fontWeight="900">
+          Splash Chat
+>>>>>>> 8e1bcfe54294c7225fabeab498cd768e9bf2ac25
         </Text>
         <div>
           <Menu>

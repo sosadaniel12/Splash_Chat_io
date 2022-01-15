@@ -35,10 +35,25 @@ function Homepage() {
         borderWidth="1px"
       >
         <Text fontSize="4xl" fontFamily="Work sans">
+<<<<<<< HEAD
           Talk-A-Tive
         </Text>
       </Box>
       <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">
+=======
+          Splash Chat
+        </Text>
+      </Box>
+      <Box
+        backdropFilter="blur(16px) saturate(80%)"
+        backgroundColor="rgba(255, 255, 255, 0.75)"
+        borderRadius="12px"
+        border="1px solid rgba(209, 213, 219, 0.3)"
+        w="100%"
+        p={4}
+        borderWidth="1px"
+      >
+>>>>>>> 8e1bcfe54294c7225fabeab498cd768e9bf2ac25
         <Tabs isFitted variant="soft-rounded">
           <TabList mb="1em">
             <Tab>Login</Tab>

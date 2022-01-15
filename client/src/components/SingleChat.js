@@ -15,7 +15,11 @@ import animationData from "../animations/typing.json";
 import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../Context/ChatProvider";
+<<<<<<< HEAD
 const ENDPOINT = "https://protected-gorge-07116.herokuapp.com/"; // "https://talk-a-tive.herokuapp.com"; -> After deployment
+=======
+const ENDPOINT = "https://safe-stream-65170.herokuapp.com/";
+>>>>>>> 8e1bcfe54294c7225fabeab498cd768e9bf2ac25
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
@@ -204,7 +208,10 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
             bg="#E8E8E8"
             w="100%"
             h="100%"
+<<<<<<< HEAD
             borderRadius="lg"
+=======
+>>>>>>> 8e1bcfe54294c7225fabeab498cd768e9bf2ac25
             overflowY="hidden"
           >
             {loading ? (
@@ -252,7 +259,11 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       ) : (
         // to get socket.io on same page
         <Box d="flex" alignItems="center" justifyContent="center" h="100%">
+<<<<<<< HEAD
           <Text fontSize="3xl" pb={3} fontFamily="Work sans">
+=======
+          <Text fontSize="3xl" pb={3} fontFamily="Work sans" color="white">
+>>>>>>> 8e1bcfe54294c7225fabeab498cd768e9bf2ac25
             Click on a user to start chatting
           </Text>
         </Box>

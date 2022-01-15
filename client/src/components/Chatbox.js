@@ -11,10 +11,19 @@ const Chatbox = ({ fetchAgain, setFetchAgain }) => {
       d={{ base: selectedChat ? "flex" : "none", md: "flex" }}
       alignItems="center"
       flexDir="column"
+<<<<<<< HEAD
       p={3}
       bg="white"
       w={{ base: "100%", md: "68%" }}
       borderRadius="lg"
+=======
+      paddingTop={3}
+      backdropFilter="blur(16px) saturate(180%)"
+      backgroundColor="rgba(216, 216, 216, 0.75)"
+      borderRadius=" 12px"
+      border="1px solid rgba(255, 255, 255, 0.125)"
+      w={{ base: "50%", md: "38%" }}
+>>>>>>> 8e1bcfe54294c7225fabeab498cd768e9bf2ac25
       borderWidth="1px"
     >
       <SingleChat fetchAgain={fetchAgain} setFetchAgain={setFetchAgain} />
