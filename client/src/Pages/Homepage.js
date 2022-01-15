@@ -35,12 +35,6 @@ function Homepage() {
         borderWidth="1px"
       >
         <Text fontSize="4xl" fontFamily="Work sans">
-<<<<<<< HEAD
-          Talk-A-Tive
-        </Text>
-      </Box>
-      <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">
-=======
           Splash Chat
         </Text>
       </Box>
@@ -53,7 +47,6 @@ function Homepage() {
         p={4}
         borderWidth="1px"
       >
->>>>>>> 8e1bcfe54294c7225fabeab498cd768e9bf2ac25
         <Tabs isFitted variant="soft-rounded">
           <TabList mb="1em">
             <Tab>Login</Tab>

@@ -52,7 +52,9 @@ const PORT = process.env.PORT;
 const server = app.listen(
   PORT,
   console.log(`Server running on PORT ${PORT}...`.yellow.bold),
-  console.log(`Use GraphQL at http://localhost:${PORT}${servers.graphqlPath}`)
+  console.log(
+    `Use GraphQL at http://localhost:${PORT}${servers.graphqlPath}`.yellow.bold
+  )
 );
 
 const io = require("socket.io")(server, {

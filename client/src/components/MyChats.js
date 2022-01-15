@@ -73,11 +73,7 @@ const MyChats = ({ fetchAgain }) => {
             fontSize={{ base: "17px", md: "10px", lg: "17px" }}
             rightIcon={<AddIcon />}
           >
-<<<<<<< HEAD
-            New Group Chat
-=======
             New Chat Room
->>>>>>> 8e1bcfe54294c7225fabeab498cd768e9bf2ac25
           </Button>
         </GroupChatModal>
       </Box>
@@ -85,11 +81,7 @@ const MyChats = ({ fetchAgain }) => {
         d="flex"
         flexDir="column"
         p={3}
-<<<<<<< HEAD
-        bg="#F8F8F8"
-=======
         bg="#F8F8F"
->>>>>>> 8e1bcfe54294c7225fabeab498cd768e9bf2ac25
         w="100%"
         h="100%"
         borderRadius="lg"
