@@ -12,6 +12,5 @@
 
 .searchBtn:hover {
   color: black;
-  width: 250px;
   transition: ease-in-out 0.4s;
 }
