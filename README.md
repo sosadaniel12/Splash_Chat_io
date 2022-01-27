@@ -4,7 +4,7 @@ Real-time chat application with socket.io implementation. Chat with friends by c
 
 ## Demo
 
-https://sosadaniel12.github.io/theWorkDayPlanner/
+https://sheltered-earth-75176.herokuapp.com/
 
 
 
