@@ -29,7 +29,7 @@ Install the depenedcies
  npm install
 ```
 
-Run App
+Run application
 
 ```bash
   npm run dev
@@ -45,3 +45,4 @@ Run App
 
 
 ## Support
+danielsosa2121@gmail.com
